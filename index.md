@@ -18,7 +18,7 @@ output:
 
 - [Slides (PDF)](docs/202306-scalable-formative-assessment.pdf)
 - [ICOTS Paper (PDF)](docs/ICOTS-Paper.pdf): Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022). Foundations for AI-Assisted Formative Assessment Feedback for Short-Answer Tasks in Large-Enrollment Classes. In *Proceedings of the eleventh international conference on teaching statistics*. Rosario, Argentina.
-- [EMNLP Paper (PDF)](docs/ICOTS-Paper.pdf): Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the Empirical Methods in Natural Language Processing 2023*. Singapore.
+- [EMNLP Paper (PDF)](docs/ICOTS-Paper.pdf): Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the Empirical Methods in Natural Language Processing 2023.* Singapore.
 - [QuantDev Website (link)](https://quantdev.ssri.psu.edu/events/past-events)
 
 

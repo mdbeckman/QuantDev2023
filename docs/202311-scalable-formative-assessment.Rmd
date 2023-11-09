@@ -32,7 +32,6 @@ library(tidyverse)
 ![(QR Code) https://forms.gle/hpW72fMYE1SsB19JA](QR-GForm.png){width=20%}
 
 
-<!-- Discuss Michael Bulmer influence while folks complete this -->
 
 # Responses to our survey?
 
@@ -78,7 +77,7 @@ library(tidyverse)
 
 ![](Proj Team3.png)
 
-# Tools (machines)
+# "Collaborators" (machines)
 
 - Natural language processing (NLP) involves how computers can be programmed to analyze language elements
 - NLP-assisted feedback for educational use:
@@ -310,7 +309,7 @@ Experiment with NLP representations
 
 # Current Events: HIL deferral policy
 
-> Our work is first (that we know of) to impelement controllable, selective prediction deferral policy
+> Our work is first (that we know of) to implement controllable, selective prediction deferral policy
 
 | Threshold     | Deferral Rate  |  Simulated HIL Accuracy | 
 |:-------------:|:--------------:|:------------------:|
@@ -326,7 +325,7 @@ Experiment with NLP representations
 
 # Current Events: Improving on SFRN
 
-- Answer-state Recurrent Relational Network (AsRRN)
+- Answer-state Recurrent Relational Network (AsRRN) [^5]
     - Breaks from reliance on linear architecture of SFRN
     - Allows flexibility to accommodate shared stem with multiple prompts
     - Better incorporates reference answers corresponding to rubric guidance
@@ -334,6 +333,8 @@ Experiment with NLP representations
     - Correct answers are generally alike
     - Many PC results align with a few common archetypes
     - Diverse ways to be incorrect
+
+[^5]: Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the Empirical Methods in Natural Language Processing 2023.* Singapore.
 
 
 # Limitations
