@@ -34,13 +34,14 @@ library(tidyverse)
 
 # One slide overview.
 
->- We think writing is important for students, but rapid feedback doesn't scale easily
->- Theory: students with similar responses can benefit from similar feedback
->- NLP algorithms can help classify & cluster responses
->- Human-in-the-loop AI; complimentary strengths
->- Useful algorithm shouldn't be "worse" than humans 
->- (How well do humans agree anyway?)
->- Challenge: getting from clusters to feedback
+>- *Pedagogy*: Writing is important for students
+>- *Logistics*: Rapid feedback doesn't scale easily
+>- *Theory*: Similar responses benefit from similar feedback
+>- *Tools*: NLP algorithms can help classify & cluster responses
+>- *Solution*: Human-in-the-loop AI; complimentary strengths
+>- *Evaluation*: Algorithm shouldn't be "worse" than humans 
+>- *Evaluation*: How well do humans agree anyway??
+>- *Challenge*: From clusters to feedback
 
 
 # Responses to our survey?
@@ -50,25 +51,42 @@ library(tidyverse)
     - [Odd] Free text response: *write anything you like*
     - [Even] Selected response: *endorse provided options*
 
+# (Recent) survey responses: "Even" number
+
+![How would you describe the value of formative assessment? (as a selected response task)](selected-response.png)
+
+
+# (Recent) survey responses: "Odd" number
+
+![How would you describe the value of formative assessment? (as a constructed response task)](constructed-response.png)
 
 
 
 # Motivation
 
-- "Write-to-learn" tasks improve learning outcomes (Graham, et al., 2020)
-- Critical for citizen-statisticians to communicate effectively (Gould, 2010)
+### Pedagogy
+
+\footnotesize
+
+- "Write-to-learn" improve learning outcomes (Graham, et al., 2020)
+- Critical for citizen-statisticians to communicate well (Gould, 2010)
 - Frequent practice w/ communicating improves statistical literacy and promotes retention (Basu, et al., 2013)
 - Formative assessment benefits both students & instructors (Black & Wiliam, 2009; GAISE, 2016; Pearl, et al., 2012)
+
+### Logistics
+
+\footnotesize
+
 - A majority of U.S. undergraduates at public institutions take at least one large-enrollment STEM course (Supiano, 2022)
-- *Logistics* of constructed response tasks jeopardize use in large-enrollment classes (Garfield & Ben-Zvi, 2008; Woodard & McGowan, 2012)
+- **Logistics** of constructed response tasks jeopardize use in large-enrollment classes (Garfield & Ben-Zvi, 2008; Woodard & McGowan, 2012)
 
 # Easy!
 
-![One of my classes; students did lots of writing (& computer programming) and everyone frequently received personalized feedback.](small-class.jpg){ width=95% }
+![One of my classes; students did lots of writing (& computer programming) and everyone frequently received personalized feedback.](small-class.jpg){ width=85% }
 
 # Erm... 
 
-![One of my classrooms; students did NOT do much writing and personalized feedback was very rare.](large-class.jpg){ width=95% }
+![One of my classrooms; students did NOT do much writing and personalized feedback was very rare.](large-class.jpg){ width=85% }
 
 
 # 
@@ -102,7 +120,7 @@ library(tidyverse)
 
 ![](Proj Team3.png)
 
-# "Collaborators" (machines)
+# Tools (machines)
 
 - Natural language processing (NLP) involves how computers can be programmed to analyze language elements
 - NLP-assisted feedback for educational use:
@@ -110,7 +128,7 @@ library(tidyverse)
     - essays & long-answer tasks earlier
 - Human-machine collaboration is a promising mechanism to assist rapid, individualized feedback at scale (Basu, 2013)
 - Deep neural networks application since 2016
-- Semantic Feature-Wise Transformation Relation Network (SFRN; Li, Tomar, & Passonneau, 2021)
+- Semantic Feature-Wise Transformation Relation Network (SFRN)
     - back-translation data augmentation (French & Chinese)
     - can accommodate rubrics, expert solutions, or both
 
@@ -130,7 +148,7 @@ set of relation vectors is combined (+) using *SFT*. The $f_{\phi}MLP$ function 
 
 
 
-# Project Schematic
+# Schematic of Partial Solution
 
 ![](Schematic.png){width=90%}
 
@@ -149,12 +167,12 @@ set of relation vectors is combined (+) using *SFT*. The $f_{\phi}MLP$ function 
 
 >- **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?  
 
->- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?  
+>- **RQ1**: What level of agreement is achieved among trained human raters labeling/scoring short-answer tasks (a few sentences)?
 
 
 \vskip 18pt
 
-### Short Paper (ICOTS)
+### ICOTS Paper
 
 \footnotesize
 
@@ -164,16 +182,16 @@ Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022).
 
 # Research Questions
 
-- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?  
+- **RQ1**: What level of agreement is achieved among trained human raters labeling/scoring short-answer tasks (a few sentences)?
 
 - **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?  
 
-- **RQ3**: What sort of NLP representation leads to good clustering performance, and how does that interact with the classification algorithm?  
+- **RQ3**: What sort of NLP representation leads to good clustering performance, and how does that interact with the classification algorithm?
 
 
 \vskip 18pt
 
-### Short Paper (ICOTS)
+### ICOTS Paper
 
 \footnotesize
 
@@ -182,7 +200,7 @@ Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022).
 
 # Spoilers?!
 
-- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?
+- **RQ1**: What level of agreement is achieved among trained human raters labeling/scoring short-answer tasks (a few sentences)?
 
 - **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?
 
@@ -220,10 +238,14 @@ Note: this sample is *not* a single large class at some institution; the availab
 - constraint: sufficient data for *intra-rater* analysis for person that had labeled 178 responses 6-7 years prior
 
 
+!["Venn diagram of three intersecting sets" according to DALL·E 2 by Open AI. Kind of a swing and a miss...](DALLE venn diagram.png){ width=30% }
+
 
 # Results (RQ1)
 
 **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?
+
+#### Inter-rater agreement:
 
 | Comparison     | Reliability | 
 |:---------------|------------:|
@@ -332,6 +354,17 @@ Experiment with NLP representations
 - **RQ3**: Classification and clustering have competing incentives for dimensionality; Lower D is better for cluster stability, Higher D better for classification reliability. (SFRN clustering was respectable despite high D, though)
 
 
+# Limitations
+
+- Study uses extant data from prior study collected from many classes of varying size
+    - not a single large class 
+    - no covariates available to identify and mitigate bias labeling (human or machine)
+    - Tasks & rubrics used for pilot were developed for research purposes; likely more polished than tasks developed "in the wild"
+- Clustering performance vs semantic meaning
+    - clustering is necessary, but not sufficient, for meaningful feedback
+    - semantic meaning of NLP clusters not yet rigorously studied
+
+
 # Current Events: HIL deferral policy
 
 > Our work is first (that we know of) to implement controllable, selective prediction deferral policy
@@ -350,7 +383,7 @@ Experiment with NLP representations
 
 # Current Events: Improving on SFRN
 
-- Answer-state Recurrent Relational Network (AsRRN) [^5]
+- Answer-state Recurrent Relational Network (AsRRN)
     - Breaks from reliance on linear architecture of SFRN
     - Allows flexibility to accommodate shared stem with multiple prompts
     - Better incorporates reference answers corresponding to rubric guidance
@@ -359,7 +392,14 @@ Experiment with NLP representations
     - Many PC results align with a few common archetypes
     - Diverse ways to be incorrect
 
-[^5]: Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the Empirical Methods in Natural Language Processing 2023.* Singapore.
+
+\vskip 18pt
+
+### EMNLP Paper
+
+\footnotesize
+
+Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the 2023 Empirical Methods in Natural Language Processing.* Singapore.
 
 
 
@@ -368,19 +408,14 @@ Experiment with NLP representations
 - challenge labeling algorithm with linguistic diversity;
     - approx 13,000 students
     - 2 of 5 institutions are HSI's
+- capture demographic information
+    - primary language spoken at home
+    - race & ethnicity
+    - gender
+    - academic major in STEM
 - diversify item and rubric input to challenge performance
 
 
-
-# Limitations
-
-- Study uses extant data from prior study collected from many classes of varying size
-    - not a single large class 
-    - no covariates available to identify and mitigate bias labeling (human or machine)
-    - Tasks & rubrics used for pilot were developed for research purposes; likely more polished than tasks developed "in the wild"
-- Clustering performance vs semantic meaning
-    - clustering is necessary, but not sufficient, for meaningful feedback
-    - semantic meaning of NLP clusters not yet rigorously studied
 
 # Future work
 
@@ -388,60 +423,58 @@ Experiment with NLP representations
 - field test key aspects of project CLASSIFIES in large classes 
 - open questions for "what works" in formative assessment
 - accumulated data made available to broader NLP community
-    - this data set would be among the largest open data sources of it's kind
-    - addresses barriers imposed by proprietary data sources on NLP research
+    - would be among the largest open data sources of it's kind
+    - addresses barriers imposed by proprietary data on NLP research
 
 
-# Acknowledgment
+# Acknowledgments & Disclaimers
 
-- We're grateful to the US National Science Foundation for funding this research
-- Project CLASSIFIES (NSF DUE-2236150)
-
-
-
-# References (1/3)
-
-\small
-
-1. Attali, Y., Powers, D., Freedman, M., Harrison, M., & Obetz, S. (2008). Automated Scoring of Short-Answer Open-Ended Gre® Subject Test Items. *ETS Research Report Series, 2008*(1), i–22.
-
-#. Basu, S., Jacobs, C., & Vanderwende, L. (2013). Powergrading: a Clustering Approach to Amplify Human Effort for Short Answer Grading. *Transactions of the Association for Computational Linguistics, 1*, 391–402. <https://doi.org/10.1162/tacl_a_00236>
-
-#. Beckman, M. (2015). Assessment Of Cognitive Transfer Outcomes For Students Of Introductory Statistics. <http://conservancy.umn.edu/handle/11299/175709>
-
-#. Black, P., & Wiliam, D. (2009). Developing the theory of formative assessment.  *Educational Assessment, Evaluation and Accountability, 21,* pp 5-31. <https://doi.org/10.1007/s11092-008-9068-5> 
-
-#. GAISE College Report ASA Revision Committee (2016). Guidelines for Assessment and Instruction in Statistics Education College Report 2016. URL: <http://www.amstat.org/education/gaise>
+This work was supported by the National Science Foundation under Grant No. DUE-2236150. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 
 
 
-# References (2/3)
+# References (1/2)
 
-\small
+\tiny
 
-6. Gould, R. (2010). Statistics and the Modern Student. *International Statistical Review / Revue Internationale de Statistique, 78*(2), 297–315. <https://www.jstor.org/stable/27919839>
+- Attali, Y., Powers, D., Freedman, M., Harrison, M., & Obetz, S. (2008). Automated Scoring of Short-Answer Open-Ended Gre® Subject Test Items. *ETS Research Report Series, 2008*(1), i–22.
 
-#. Guo, W., Diab, M. (2012) Modeling Sentences in the Latent Space. In *Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics*, pages 864–872. Association for Computational Linguistics.
+- Basu, S., Jacobs, C., & Vanderwende, L. (2013). Powergrading: a Clustering Approach to Amplify Human Effort for Short Answer Grading. *Transactions of the Association for Computational Linguistics, 1*, 391–402. <https://doi.org/10.1162/tacl_a_00236>
 
-#. Graham, S., Kiuhara, S. A., & MacKay, M. (2020). The Effects of Writing on Learning in Science, Social Studies, and Mathematics: A Meta-Analysis. *Review of Educational Research, 90*(2), 179–226.
+- Beckman, M. (2015). Assessment Of Cognitive Transfer Outcomes For Students Of Introductory Statistics. <http://conservancy.umn.edu/handle/11299/175709>
 
-#. Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
+- Black, P., & Wiliam, D. (2009). Developing the theory of formative assessment.  *Educational Assessment, Evaluation and Accountability, 21,* pp 5-31. <https://doi.org/10.1007/s11092-008-9068-5> 
+
+- GAISE College Report ASA Revision Committee (2016). Guidelines for Assessment and Instruction in Statistics Education College Report 2016. URL: <http://www.amstat.org/education/gaise>
+
+- Gould, R. (2010). Statistics and the Modern Student. *International Statistical Review / Revue Internationale de Statistique, 78*(2), 297–315. <https://www.jstor.org/stable/27919839>
+
+- Guo, W., Diab, M. (2012) Modeling Sentences in the Latent Space. In *Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics*, pages 864–872. Association for Computational Linguistics.
+
+- Graham, S., Kiuhara, S. A., & MacKay, M. (2020). The Effects of Writing on Learning in Science, Social Studies, and Mathematics: A Meta-Analysis. *Review of Educational Research, 90*(2), 179–226.
 
 
-# References (3/3)
+# References (2/2)
 
-\small
+\tiny
 
-10. Page, E. B. (1994). Computer Grading of Student Prose, Using Modern Concepts and Software. *The Journal of Experimental Education, 62*(2), 127–142.
+- Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
 
-#. Pearl, D. K., Garfield, J. B., delMas, R., Groth, R. E., Kaplan, J. J., McGowan, H., & Lee, H. S. (2012). Connecting Research to Practice in a Culture of Assessment for Introductory College-level Statistics. URL: <http://www.causeweb.org/research/guidelines/ResearchReport_Dec_2012.pdf>
 
-#. U.S. Department of Education, Office of Educational Technology (2023). Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations, Washington, DC.
+- Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the 2023 Empirical Methods in Natural Language Processing.* Singapore.
 
-#. Viera, A. J., & Garrett, J. M. (2005). Understanding interobserver agreement: the kappa statistic. *Family Medicine, 37*(5), 360–363.
+- Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z.(2022). Foundations for AI-Assisted Formative Assessment Feedback for Short-Answer Tasks in Large-Enrollment Classes. In *Proceedings of the eleventh international conference on teaching statistics.* Rosario, Argentina.
 
-#. Woodard, R., & McGowan, H. (2012). Redesigning a large introductory course to incorporate the GAISE guidelines. *Journal of Statistics Education, 20*(3). 
+- Page, E. B. (1994). Computer Grading of Student Prose, Using Modern Concepts and Software. *The Journal of Experimental Education, 62*(2), 127–142.
+
+- Pearl, D. K., Garfield, J. B., delMas, R., Groth, R. E., Kaplan, J. J., McGowan, H., & Lee, H. S. (2012). Connecting Research to Practice in a Culture of Assessment for Introductory College-level Statistics. URL: <http://www.causeweb.org/research/guidelines/ResearchReport_Dec_2012.pdf>
+
+- U.S. Department of Education, Office of Educational Technology (2023). Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations, Washington, DC.
+
+- Viera, A. J., & Garrett, J. M. (2005). Understanding interobserver agreement: the kappa statistic. *Family Medicine, 37*(5), 360–363.
+
+- Woodard, R., & McGowan, H. (2012). Redesigning a large introductory course to incorporate the GAISE guidelines. *Journal of Statistics Education, 20*(3). 
 
 
 
