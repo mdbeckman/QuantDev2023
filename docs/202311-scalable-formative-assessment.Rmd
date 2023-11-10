@@ -32,6 +32,16 @@ library(tidyverse)
 ![(QR Code) https://forms.gle/hpW72fMYE1SsB19JA](QR-GForm.png){width=20%}
 
 
+# One slide overview.
+
+>- We think writing is important for students, but rapid feedback doesn't scale easily
+>- Theory: students with similar responses can benefit from similar feedback
+>- NLP algorithms can help classify & cluster responses
+>- Human-in-the-loop AI; complimentary strengths
+>- Useful algorithm shouldn't be "worse" than humans 
+>- (How well do humans agree anyway?)
+>- Challenge: getting from clusters to feedback
+
 
 # Responses to our survey?
 
@@ -39,6 +49,8 @@ library(tidyverse)
 2. How did you describe the value of formative assessment?
     - [Odd] Free text response: *write anything you like*
     - [Even] Selected response: *endorse provided options*
+
+
 
 
 # Motivation
@@ -52,13 +64,26 @@ library(tidyverse)
 
 # Easy!
 
-![](small-class.jpg){ width=95% }
+![One of my classes; students did lots of writing (& computer programming) and everyone frequently received personalized feedback.](small-class.jpg){ width=95% }
 
 # Erm... 
 
-![](large-class.jpg){ width=95% }
+![One of my classrooms; students did NOT do much writing and personalized feedback was very rare.](large-class.jpg){ width=95% }
 
-<!-- # Policy Report (May 2023) -->
+
+# 
+
+![Recent report on AI and the future of teaching and learning from US Dept of Education, Office of Educational Technology (May 2023)[^6] ](US-DOE-AI4Ed.png)
+
+
+[^6]: U.S. Department of Education, Office of Educational Technology (2023). *Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations.* Washington, DC.
+
+
+
+# Recommendations from US Dept of Educaiton[^6]
+
+![](US-DOE-recommendations.png){ width=95% }
+
 
 
 
@@ -337,6 +362,16 @@ Experiment with NLP representations
 [^5]: Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the Empirical Methods in Natural Language Processing 2023.* Singapore.
 
 
+
+# Current Work: New Data Collection
+
+- challenge labeling algorithm with linguistic diversity;
+    - approx 13,000 students
+    - 2 of 5 institutions are HSI's
+- diversify item and rubric input to challenge performance
+
+
+
 # Limitations
 
 - Study uses extant data from prior study collected from many classes of varying size
@@ -347,54 +382,15 @@ Experiment with NLP representations
     - clustering is necessary, but not sufficient, for meaningful feedback
     - semantic meaning of NLP clusters not yet rigorously studied
 
-# Future Work
+# Future work
 
-Software development goals: 
-
-- challenge labeling algorithm with linguistic diversity;
 - iterative instructor input to group conceptual representations
-- Curse of dimensionality
-    - distance between elements to be clustered increases monotonically with dimensionality (Bellman, 2003)
-    - SRFN is a fairly high dimensional representation (D = 512)
-    - tension between demands of classification and clustering tasks
-    
-Field test expansion: 
-
 - field test key aspects of project CLASSIFIES in large classes 
-    - approx 13,000 students
-    - 2 of 5 institutions are HSI's
-- diversify item and rubric input to challenge performance
-
-
-
-# Additional Implications
-
 - open questions for "what works" in formative assessment
 - accumulated data made available to broader NLP community
     - this data set would be among the largest open data sources of it's kind
     - addresses barriers imposed by proprietary data sources on NLP research
 
-
-# Breaking News
-
-![New report on AI and the future of teaching and learning from US Dept of Education, Office of Educational Technology (May 2023)[^6] ](US-DOE-AI4Ed.png)
-
-
-[^6]: U.S. Department of Education, Office of Educational Technology (2023). *Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations.* Washington, DC.
-
-
-
-# Recommendations from US Dept of Educaiton[^6]
-
-![](US-DOE-recommendations.png){ width=95% }
-
-
-
-# 
-
-AI tools are powerful, but unclear where they're heading without human partnership.  While our results are still quite preliminary, we think human-in-the-loop is a promising avenue toward scalable short-answer formative assessment.
-
-![image created with assistance of DALL·E 2 by Open AI prompted to illustrate a roadmap for the future of educational research](DALLE roadmap.png){ width=55% }
 
 # Acknowledgment
 
@@ -458,25 +454,16 @@ AI tools are powerful, but unclear where they're heading without human partnersh
 Resource Page URL: <https://mdbeckman.github.io/QUT2023/>
 
 
-# Google Photos Illustration
+# Google Photos Comparative Judgment
 
-![](GooglePhotos.jpeg)
+![A type of comparative judgment; in this case the algorithm has shown a likely label to the human for approval.](GooglePhotos.jpeg)
 
 
 # Google Photos "Deferral"
 
-![](GooglePhotoDeferral.jpeg)
+![Deferral; Algorithm requests human judgment without indication of a likely label or reason for requesting input (e.g., validate a very likely result, edge case arbitration).](GooglePhotoDeferral.jpeg)
 
 Our approach to HIL would likely not make a recommendation to the human, just basically request help.
-
-
-
-# Venn Diagram Fail
-
-There was extra space on a Methods slide describing how we partitioned the sample to evaluate rater agreement... but DALLE wasn't up to the task.
-
-![Me: "oil painting of Venn diagram for three intersecting sets"; DALLE 2 ...swing and a miss](DALLE venn diagram.png){width=30%}
-
 
 
 
