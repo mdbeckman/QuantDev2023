@@ -40,8 +40,8 @@ library(tidyverse)
 >- *Tools*: NLP algorithms can help classify & cluster responses
 >- *Solution*: Human-in-the-loop AI; complimentary strengths
 >- *Evaluation*: Algorithm shouldn't be "worse" than humans 
->- *Evaluation*: How well do humans agree anyway??
->- *Challenge*: From clusters to feedback
+>- *Evaluation*: How well do humans agree?
+>- *Challenge*: clusters vs. feedback
 
 
 # Responses to our survey?
@@ -51,14 +51,15 @@ library(tidyverse)
     - [Odd] Free text response: *write anything you like*
     - [Even] Selected response: *endorse provided options*
 
-# (Recent) survey responses: "Even" number
-
-![How would you describe the value of formative assessment? (as a selected response task)](selected-response.png)
-
 
 # (Recent) survey responses: "Odd" number
 
 ![How would you describe the value of formative assessment? (as a constructed response task)](constructed-response.png)
+
+
+# (Recent) survey responses: "Even" number
+
+![How would you describe the value of formative assessment? (as a selected response task)](selected-response.png)
 
 
 
@@ -145,6 +146,7 @@ SFRN is an end-to-end model with 3 components:
 
 ![The $g_{\theta}MLP$ function computes the relation vector for each [Q,R,A] triple. A
 set of relation vectors is combined (+) using *SFT*. The $f_{\phi}MLP$ function is the assessment classifier.](SFRN.png){width=70%}
+
 
 
 
@@ -268,7 +270,7 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 The set of task-responses were randomly split four ways:  
 
-- 90% of data for development purposes (train), were partitioned 8:1:1
+- 90% of data for development purposes (train); 8:1:1 partition
     - training (72%), 
     - development (9%)
     - evaluation (9%)
@@ -406,19 +408,20 @@ Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Rec
 # Current Work: New Data Collection
 
 - challenge labeling algorithm with linguistic diversity;
-    - approx 13,000 students
+    - approx 13,000 task-responses in Fall 2023
     - 2 of 5 institutions are HSI's
-- capture demographic information
-    - primary language spoken at home
+- self-reported demographic information
+    - language(s) at home
     - race & ethnicity
     - gender
-    - academic major in STEM
+    - academic major
 - diversify item and rubric input to challenge performance
 
 
 
 # Future work
 
+- accommodation for bias (e.g., human; algorithm)
 - iterative instructor input to group conceptual representations
 - field test key aspects of project CLASSIFIES in large classes 
 - open questions for "what works" in formative assessment
