@@ -99,7 +99,7 @@ library(tidyverse)
 
 
 
-# Recommendations from US Dept of Educaiton[^6]
+# Recommendations from US Dept of Education[^6]
 
 ![](US-DOE-recommendations.png){ width=95% }
 
@@ -129,9 +129,11 @@ library(tidyverse)
     - essays & long-answer tasks earlier
 - Human-machine collaboration is a promising mechanism to assist rapid, individualized feedback at scale (Basu, 2013)
 - Deep neural networks application since 2016
-- Semantic Feature-Wise Transformation Relation Network (SFRN)
+- Semantic Feature-Wise Transformation Relation Network (SFRN)[^6]
     - back-translation data augmentation (French & Chinese)
     - can accommodate rubrics, expert solutions, or both
+
+[^6]: Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing.*
 
 
 # SFRN Detail (Li et al., 2021)
@@ -303,10 +305,9 @@ SFRN was compared to other NLP algorithms for accuracy using a subset of student
 
 \footnotesize
 
-Reliability interpretation[^3]: 0.6 < substantial < 0.8 < near perfect < 1.0
+Reliability interpretation: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 [^2]: SFRN & LSTM comparison excludes instances when human labels disagree
-[^3]: Viera & Garrett (2005) 
 
 
 
@@ -318,7 +319,7 @@ Manual pilot of human-generated clustering
 - Each reviewer provided free-text feedback to each student
 - Verbatim feedback captured for each reviewer and cross-tabulated for analysis. 
 
-Experiment with NLP representations
+Preliminary experiment with NLP representations
 
 - retrain k-means & k-mediods clustering to evaluate cluster stability
 - compare representations with higher & lower dimensionality
@@ -367,6 +368,20 @@ Experiment with NLP representations
     - semantic meaning of NLP clusters not yet rigorously studied
 
 
+# Ongoing Data Collection (Fall 2023 +)
+
+- challenge labeling algorithm with linguistic diversity;
+    - approx 13,000 task-responses in Fall 2023
+    - 2 of 5 institutions are HSI's
+- self-reported demographic covariates
+    - language(s) at home
+    - race & ethnicity
+    - gender
+    - academic major
+- diversify item and rubric input to challenge performance
+
+
+
 # Current Events: HIL deferral policy
 
 > Our work is first (that we know of) to implement controllable, selective prediction deferral policy
@@ -402,21 +417,6 @@ Experiment with NLP representations
 \footnotesize
 
 Li, Z., Lloyd, S. E., Beckman, M., & Passonneau, R. (accepted). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping. In *Findings of the 2023 Empirical Methods in Natural Language Processing.* Singapore.
-
-
-
-# Current Work: New Data Collection
-
-- challenge labeling algorithm with linguistic diversity;
-    - approx 13,000 task-responses in Fall 2023
-    - 2 of 5 institutions are HSI's
-- self-reported demographic information
-    - language(s) at home
-    - race & ethnicity
-    - gender
-    - academic major
-- diversify item and rubric input to challenge performance
-
 
 
 # Future work
